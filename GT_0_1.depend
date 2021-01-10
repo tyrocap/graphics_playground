@@ -1,0 +1,100 @@
+# depslib dependency file v1.0
+1610238824 source:/home/adam/dev/GT_0_1/main.cpp
+	<iostream>
+	<GL/glew.h>
+	<Display.h>
+	<Shader.h>
+	<Mesh.h>
+	<Texture.h>
+	<Transform.h>
+	<Camera.h>
+
+1610067313 /home/adam/dev/GT_0_1/include/Display.h
+	<SDL2/SDL.h>
+	<string>
+
+1610238722 source:/home/adam/dev/GT_0_1/src/Display.cpp
+	"Display.h"
+	<GL/glew.h>
+	<iostream>
+
+1610131198 /home/adam/dev/GT_0_1/include/Shader.h
+	<string>
+	<GL/glew.h>
+	<Transform.h>
+	<Camera.h>
+
+1610131260 source:/home/adam/dev/GT_0_1/src/Shader.cpp
+	"Shader.h"
+	<iostream>
+	<fstream>
+
+1610132498 /home/adam/dev/GT_0_1/include/Mesh.h
+	<glm/glm.hpp>
+	<GL/glew.h>
+	"obj_loader.h"
+
+1610136985 source:/home/adam/dev/GT_0_1/src/Mesh.cpp
+	"Mesh.h"
+	<vector>
+	"obj_loader.h"
+
+1610116660 /home/adam/dev/GT_0_1/include/Texture.h
+	<string>
+	<GL/glew.h>
+
+1418909075 source:/home/adam/dev/GT_0_1/stb_image.c
+	"stb_image.h"
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<memory.h>
+	<assert.h>
+	<stdarg.h>
+
+1418909075 /home/adam/dev/GT_0_1/stb_image.h
+	<stdio.h>
+
+1418909075 /home/adam/dev/GT_0_1/include/stb_image.h
+	<stdio.h>
+
+1610118649 source:/home/adam/dev/GT_0_1/src/Texture.cpp
+	"Texture.h"
+	"stb_image.h"
+	<cassert>
+	<iostream>
+
+1610125801 source:/home/adam/dev/GT_0_1/src/Transform.cpp
+	"Transform.h"
+
+1610126606 /home/adam/dev/GT_0_1/include/Transform.h
+	<glm/glm.hpp>
+	<glm/gtx/transform.hpp>
+
+1610130882 source:/home/adam/dev/GT_0_1/src/Camera.cpp
+	"Camera.h"
+
+1610131087 /home/adam/dev/GT_0_1/include/Camera.h
+	<glm/glm.hpp>
+	<glm/gtx/transform.hpp>
+
+1418909075 /home/adam/dev/GT_0_1/include/obj_loader.h
+	<glm/glm.hpp>
+	<vector>
+	<string>
+
+1418909075 source:/home/adam/dev/GT_0_1/src/obj_loader.cpp
+	"obj_loader.h"
+	<fstream>
+	<iostream>
+	<algorithm>
+	<map>
+
+1418909075 source:/home/adam/dev/GT_0_1/obj_loader.cpp
+	"obj_loader.h"
+	<fstream>
+	<iostream>
+	<algorithm>
+	<map>
+

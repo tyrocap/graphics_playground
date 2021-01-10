@@ -1,0 +1,18 @@
+#ifndef MESH_
+#define MESH_
+
+
+class Mesh
+{
+    public:
+        Mesh();
+        virtual ~Mesh();
+        Mesh(const Mesh& other);
+        Mesh& operator=(const Mesh& other);
+
+    protected:
+
+    private:
+};
+
+#endif // MESH_
