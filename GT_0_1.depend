@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1610238824 source:/home/adam/dev/GT_0_1/main.cpp
+1610315803 source:/home/adam/dev/GT_0_1/main.cpp
 	<iostream>
 	<GL/glew.h>
 	<Display.h>
@@ -13,7 +13,7 @@
 	<SDL2/SDL.h>
 	<string>
 
-1610238722 source:/home/adam/dev/GT_0_1/src/Display.cpp
+1610313253 source:/home/adam/dev/GT_0_1/src/Display.cpp
 	"Display.h"
 	<GL/glew.h>
 	<iostream>
@@ -24,7 +24,7 @@
 	<Transform.h>
 	<Camera.h>
 
-1610131260 source:/home/adam/dev/GT_0_1/src/Shader.cpp
+1610249947 source:/home/adam/dev/GT_0_1/src/Shader.cpp
 	"Shader.h"
 	<iostream>
 	<fstream>
@@ -34,7 +34,7 @@
 	<GL/glew.h>
 	"obj_loader.h"
 
-1610136985 source:/home/adam/dev/GT_0_1/src/Mesh.cpp
+1610315402 source:/home/adam/dev/GT_0_1/src/Mesh.cpp
 	"Mesh.h"
 	<vector>
 	"obj_loader.h"

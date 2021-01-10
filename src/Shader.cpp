@@ -66,7 +66,6 @@ void Shader::Update(const Transform& transform, const Camera& camera) {
 
 static GLuint CreateShader(const std::string& text, GLenum shaderType) {
 
-
     GLuint shader = glCreateShader(shaderType);
 
     if (shader == 0) {

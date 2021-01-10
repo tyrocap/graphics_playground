@@ -6,6 +6,9 @@ Mesh::Mesh(const std::string& fileName) {
 
     IndexedModel model = OBJModel(fileName).ToIndexedModel();
     InitMesh(model);
+
+    // load model
+
 }
 
 Mesh::Mesh(Vertex* vertices, unsigned int numVertices, unsigned int* indices, unsigned int numIndices)
@@ -36,18 +39,21 @@ void Mesh::InitMesh(const IndexedModel& model) {
 
     m_drawCount = model.indices.size();
 
+    // generate vertex array obj names
     glGenVertexArrays(1, &m_vertexArrayObject);
     glBindVertexArray(m_vertexArrayObject);
 
+    // generate buffer obj names
     glGenBuffers(NUM_BUFFERS, m_vertexArrayBuffers);
-    // buffer for positions
     glBindBuffer(GL_ARRAY_BUFFER, m_vertexArrayBuffers[POSITION_VB]);
+
+    // init buffer obj data store
     glBufferData(GL_ARRAY_BUFFER, model.positions.size() * sizeof(model.positions[0]), &model.positions[0], GL_STATIC_DRAW);
+
 
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
-    // buffer for texCoords
     glBindBuffer(GL_ARRAY_BUFFER, m_vertexArrayBuffers[TEXCOORD_VB]);
     glBufferData(GL_ARRAY_BUFFER, model.positions.size() * sizeof(model.texCoords[0]), &model.texCoords[0], GL_STATIC_DRAW);
 
@@ -58,16 +64,11 @@ void Mesh::InitMesh(const IndexedModel& model) {
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, model.indices.size() * sizeof(model.indices[0]), &model.indices[0], GL_STATIC_DRAW);
 
     glBindVertexArray(0);
-
-
 }
 
 
 void Mesh::Draw() {
     glBindVertexArray(m_vertexArrayObject);
-
     glDrawElements(GL_TRIANGLES, m_drawCount, GL_UNSIGNED_INT, 0);
-    //glDrawArrays(GL_TRIANGLES, 0, m_drawCount);
-
     glBindVertexArray(0);
 }
